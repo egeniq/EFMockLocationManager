@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Egeniq. All rights reserved.
 //
 
-#import "EFLocationScenario.h"
+#import <EFLocationScenario.h>
 
 @class CLLocation;
 
