@@ -21,6 +21,8 @@
 
 @end
 
+#define NOT_SUPPORTED NSLog(@"This method isn't yet supported by the mock location manager. Feel free to contribute.")
+
 @implementation EFMockLocationManager
 
 #pragma mark - initialization
@@ -70,36 +72,36 @@
 }
 
 - (void)startMonitoringForRegion:(CLRegion *)region desiredAccuracy:(CLLocationAccuracy)accuracy {
-    // not supported
+    NOT_SUPPORTED;
 }
 
 #pragma mark - ibeacon methods, not yet supported
 - (void)stopMonitoringForRegion:(CLRegion *)region {
-    
+    NOT_SUPPORTED;
 }
 
 - (void)startMonitoringForRegion:(CLRegion *)region {
-    
+    NOT_SUPPORTED;
 }
 
 - (void)requestStateForRegion:(CLRegion *)region {
-    
+    NOT_SUPPORTED;
 }
 
 - (void)startRangingBeaconsInRegion:(CLBeaconRegion *)region {
-    
+    NOT_SUPPORTED;
 }
 
 - (void)stopRangingBeaconsInRegion:(CLBeaconRegion *)region {
-    
+    NOT_SUPPORTED;
 }
 
 - (void)allowDeferredLocationUpdatesUntilTraveled:(CLLocationDistance)distance timeout:(NSTimeInterval)timeout {
-    
+    NOT_SUPPORTED;
 }
 
 - (void)disallowDeferredLocationUpdates {
-    
+    NOT_SUPPORTED;
 }
 
 + (BOOL)locationServicesEnabled {
