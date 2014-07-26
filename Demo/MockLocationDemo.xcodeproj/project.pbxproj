@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		923CABCF1981B4F300EF9751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CABCE1981B4F300EF9751 /* Foundation.framework */; };
+		923CABD11981B4F300EF9751 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CABD01981B4F300EF9751 /* CoreGraphics.framework */; };
+		923CABD31981B4F300EF9751 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CABD21981B4F300EF9751 /* UIKit.framework */; };
+		923CABD91981B4F300EF9751 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 923CABD71981B4F300EF9751 /* InfoPlist.strings */; };
+		923CABDB1981B4F300EF9751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CABDA1981B4F300EF9751 /* main.m */; };
+		923CABDF1981B4F300EF9751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CABDE1981B4F300EF9751 /* AppDelegate.m */; };
+		923CABE21981B4F300EF9751 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923CABE01981B4F300EF9751 /* Main_iPhone.storyboard */; };
+		923CABE51981B4F300EF9751 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923CABE31981B4F300EF9751 /* Main_iPad.storyboard */; };
+		923CABE81981B4F300EF9751 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CABE71981B4F300EF9751 /* ViewController.m */; };
+		923CABEA1981B4F300EF9751 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923CABE91981B4F300EF9751 /* Images.xcassets */; };
+		923CABF11981B4F300EF9751 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CABF01981B4F300EF9751 /* XCTest.framework */; };
+		923CABF21981B4F300EF9751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CABCE1981B4F300EF9751 /* Foundation.framework */; };
+		923CABF31981B4F300EF9751 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CABD21981B4F300EF9751 /* UIKit.framework */; };
+		923CABFB1981B4F300EF9751 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 923CABF91981B4F300EF9751 /* InfoPlist.strings */; };
+		923CABFD1981B4F300EF9751 /* MockLocationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CABFC1981B4F300EF9751 /* MockLocationDemoTests.m */; };
+		923CAC091981B6BE00EF9751 /* EFMockLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CAC081981B6BE00EF9751 /* EFMockLocationManager.m */; };
+		923CAC0C1981B9AD00EF9751 /* EFLocationScenarioRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CAC0B1981B9AD00EF9751 /* EFLocationScenarioRunner.m */; };
+		923CAC0F1981BA2F00EF9751 /* EFLocationScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CAC0E1981BA2F00EF9751 /* EFLocationScenario.m */; };
+		923CAC121981BA4800EF9751 /* EFStraightLineScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CAC111981BA4800EF9751 /* EFStraightLineScenario.m */; };
+		923CAC1B19823C7000EF9751 /* CLLocation+LocationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CAC1819823C7000EF9751 /* CLLocation+LocationExtensions.m */; };
+		923CAC1C19823C7000EF9751 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 923CAC1919823C7000EF9751 /* LICENSE */; };
+		923CAC1D19823C7000EF9751 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 923CAC1A19823C7000EF9751 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		923CABF41981B4F300EF9751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 923CABC31981B4F300EF9751 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 923CABCA1981B4F300EF9751;
+			remoteInfo = mocklocationdemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		923CABCB1981B4F300EF9751 /* MockLocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockLocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		923CABCE1981B4F300EF9751 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		923CABD01981B4F300EF9751 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		923CABD21981B4F300EF9751 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		923CABD61981B4F300EF9751 /* MockLocationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MockLocationDemo-Info.plist"; sourceTree = "<group>"; };
+		923CABD81981B4F300EF9751 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		923CABDA1981B4F300EF9751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		923CABDC1981B4F300EF9751 /* MockLocationDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MockLocationDemo-Prefix.pch"; sourceTree = "<group>"; };
+		923CABDD1981B4F300EF9751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		923CABDE1981B4F300EF9751 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		923CABE11981B4F300EF9751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		923CABE41981B4F300EF9751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		923CABE61981B4F300EF9751 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		923CABE71981B4F300EF9751 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		923CABE91981B4F300EF9751 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		923CABEF1981B4F300EF9751 /* MockLocationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockLocationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		923CABF01981B4F300EF9751 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		923CABF81981B4F300EF9751 /* MockLocationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MockLocationDemo-Info.plist"; sourceTree = "<group>"; };
+		923CABFA1981B4F300EF9751 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		923CABFC1981B4F300EF9751 /* MockLocationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockLocationDemoTests.m; sourceTree = "<group>"; };
+		923CAC071981B6BE00EF9751 /* EFMockLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFMockLocationManager.h; sourceTree = "<group>"; };
+		923CAC081981B6BE00EF9751 /* EFMockLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMockLocationManager.m; sourceTree = "<group>"; };
+		923CAC0A1981B9AD00EF9751 /* EFLocationScenarioRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFLocationScenarioRunner.h; sourceTree = "<group>"; };
+		923CAC0B1981B9AD00EF9751 /* EFLocationScenarioRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFLocationScenarioRunner.m; sourceTree = "<group>"; };
+		923CAC0D1981BA2E00EF9751 /* EFLocationScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFLocationScenario.h; sourceTree = "<group>"; };
+		923CAC0E1981BA2F00EF9751 /* EFLocationScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFLocationScenario.m; sourceTree = "<group>"; };
+		923CAC101981BA4800EF9751 /* EFStraightLineScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFStraightLineScenario.h; sourceTree = "<group>"; };
+		923CAC111981BA4800EF9751 /* EFStraightLineScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFStraightLineScenario.m; sourceTree = "<group>"; };
+		923CAC131982303A00EF9751 /* EFLocationScenario-Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EFLocationScenario-Internal.h"; sourceTree = "<group>"; };
+		923CAC1719823C7000EF9751 /* CLLocation+LocationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+LocationExtensions.h"; sourceTree = "<group>"; };
+		923CAC1819823C7000EF9751 /* CLLocation+LocationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+LocationExtensions.m"; sourceTree = "<group>"; };
+		923CAC1919823C7000EF9751 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		923CAC1A19823C7000EF9751 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		923CABC81981B4F300EF9751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923CABD11981B4F300EF9751 /* CoreGraphics.framework in Frameworks */,
+				923CABD31981B4F300EF9751 /* UIKit.framework in Frameworks */,
+				923CABCF1981B4F300EF9751 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		923CABEC1981B4F300EF9751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923CABF11981B4F300EF9751 /* XCTest.framework in Frameworks */,
+				923CABF31981B4F300EF9751 /* UIKit.framework in Frameworks */,
+				923CABF21981B4F300EF9751 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		923CABC21981B4F300EF9751 = {
+			isa = PBXGroup;
+			children = (
+				923CAC061981B68B00EF9751 /* EFMockLocationManager */,
+				923CABD41981B4F300EF9751 /* Application */,
+				923CABF61981B4F300EF9751 /* Tests */,
+				923CABCD1981B4F300EF9751 /* Frameworks */,
+				923CABCC1981B4F300EF9751 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		923CABCC1981B4F300EF9751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				923CABCB1981B4F300EF9751 /* MockLocationDemo.app */,
+				923CABEF1981B4F300EF9751 /* MockLocationDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		923CABCD1981B4F300EF9751 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				923CABCE1981B4F300EF9751 /* Foundation.framework */,
+				923CABD01981B4F300EF9751 /* CoreGraphics.framework */,
+				923CABD21981B4F300EF9751 /* UIKit.framework */,
+				923CABF01981B4F300EF9751 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		923CABD41981B4F300EF9751 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				923CABDD1981B4F300EF9751 /* AppDelegate.h */,
+				923CABDE1981B4F300EF9751 /* AppDelegate.m */,
+				923CABE01981B4F300EF9751 /* Main_iPhone.storyboard */,
+				923CABE31981B4F300EF9751 /* Main_iPad.storyboard */,
+				923CABE61981B4F300EF9751 /* ViewController.h */,
+				923CABE71981B4F300EF9751 /* ViewController.m */,
+				923CABE91981B4F300EF9751 /* Images.xcassets */,
+				923CABD51981B4F300EF9751 /* Supporting Files */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		923CABD51981B4F300EF9751 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				923CABD61981B4F300EF9751 /* MockLocationDemo-Info.plist */,
+				923CABD71981B4F300EF9751 /* InfoPlist.strings */,
+				923CABDA1981B4F300EF9751 /* main.m */,
+				923CABDC1981B4F300EF9751 /* MockLocationDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		923CABF61981B4F300EF9751 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				923CABFC1981B4F300EF9751 /* MockLocationDemoTests.m */,
+				923CABF71981B4F300EF9751 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		923CABF71981B4F300EF9751 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				923CABF81981B4F300EF9751 /* MockLocationDemo-Info.plist */,
+				923CABF91981B4F300EF9751 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		923CAC061981B68B00EF9751 /* EFMockLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				923CAC1519823C3100EF9751 /* External */,
+				923CAC141982304100EF9751 /* Internal */,
+				923CAC071981B6BE00EF9751 /* EFMockLocationManager.h */,
+				923CAC081981B6BE00EF9751 /* EFMockLocationManager.m */,
+				923CAC0A1981B9AD00EF9751 /* EFLocationScenarioRunner.h */,
+				923CAC0B1981B9AD00EF9751 /* EFLocationScenarioRunner.m */,
+				923CAC0D1981BA2E00EF9751 /* EFLocationScenario.h */,
+				923CAC0E1981BA2F00EF9751 /* EFLocationScenario.m */,
+				923CAC101981BA4800EF9751 /* EFStraightLineScenario.h */,
+				923CAC111981BA4800EF9751 /* EFStraightLineScenario.m */,
+			);
+			name = EFMockLocationManager;
+			path = ../EFMockLocationManager;
+			sourceTree = "<group>";
+		};
+		923CAC141982304100EF9751 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				923CAC131982303A00EF9751 /* EFLocationScenario-Internal.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		923CAC1519823C3100EF9751 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				923CAC1619823C3800EF9751 /* LocationExtensions */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		923CAC1619823C3800EF9751 /* LocationExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				923CAC1719823C7000EF9751 /* CLLocation+LocationExtensions.h */,
+				923CAC1819823C7000EF9751 /* CLLocation+LocationExtensions.m */,
+				923CAC1919823C7000EF9751 /* LICENSE */,
+				923CAC1A19823C7000EF9751 /* README.md */,
+			);
+			path = LocationExtensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		923CABCA1981B4F300EF9751 /* MockLocationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 923CAC001981B4F300EF9751 /* Build configuration list for PBXNativeTarget "MockLocationDemo" */;
+			buildPhases = (
+				923CABC71981B4F300EF9751 /* Sources */,
+				923CABC81981B4F300EF9751 /* Frameworks */,
+				923CABC91981B4F300EF9751 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MockLocationDemo;
+			productName = mocklocationdemo;
+			productReference = 923CABCB1981B4F300EF9751 /* MockLocationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		923CABEE1981B4F300EF9751 /* MockLocationDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 923CAC031981B4F300EF9751 /* Build configuration list for PBXNativeTarget "MockLocationDemoTests" */;
+			buildPhases = (
+				923CABEB1981B4F300EF9751 /* Sources */,
+				923CABEC1981B4F300EF9751 /* Frameworks */,
+				923CABED1981B4F300EF9751 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				923CABF51981B4F300EF9751 /* PBXTargetDependency */,
+			);
+			name = MockLocationDemoTests;
+			productName = mocklocationdemoTests;
+			productReference = 923CABEF1981B4F300EF9751 /* MockLocationDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		923CABC31981B4F300EF9751 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Egeniq;
+				TargetAttributes = {
+					923CABEE1981B4F300EF9751 = {
+						TestTargetID = 923CABCA1981B4F300EF9751;
+					};
+				};
+			};
+			buildConfigurationList = 923CABC61981B4F300EF9751 /* Build configuration list for PBXProject "MockLocationDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 923CABC21981B4F300EF9751;
+			productRefGroup = 923CABCC1981B4F300EF9751 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				923CABCA1981B4F300EF9751 /* MockLocationDemo */,
+				923CABEE1981B4F300EF9751 /* MockLocationDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		923CABC91981B4F300EF9751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923CAC1D19823C7000EF9751 /* README.md in Resources */,
+				923CABE51981B4F300EF9751 /* Main_iPad.storyboard in Resources */,
+				923CABEA1981B4F300EF9751 /* Images.xcassets in Resources */,
+				923CABE21981B4F300EF9751 /* Main_iPhone.storyboard in Resources */,
+				923CABD91981B4F300EF9751 /* InfoPlist.strings in Resources */,
+				923CAC1C19823C7000EF9751 /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		923CABED1981B4F300EF9751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923CABFB1981B4F300EF9751 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		923CABC71981B4F300EF9751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923CABE81981B4F300EF9751 /* ViewController.m in Sources */,
+				923CAC121981BA4800EF9751 /* EFStraightLineScenario.m in Sources */,
+				923CAC0F1981BA2F00EF9751 /* EFLocationScenario.m in Sources */,
+				923CABDF1981B4F300EF9751 /* AppDelegate.m in Sources */,
+				923CABDB1981B4F300EF9751 /* main.m in Sources */,
+				923CAC091981B6BE00EF9751 /* EFMockLocationManager.m in Sources */,
+				923CAC1B19823C7000EF9751 /* CLLocation+LocationExtensions.m in Sources */,
+				923CAC0C1981B9AD00EF9751 /* EFLocationScenarioRunner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		923CABEB1981B4F300EF9751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				923CABFD1981B4F300EF9751 /* MockLocationDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		923CABF51981B4F300EF9751 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 923CABCA1981B4F300EF9751 /* MockLocationDemo */;
+			targetProxy = 923CABF41981B4F300EF9751 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		923CABD71981B4F300EF9751 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923CABD81981B4F300EF9751 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		923CABE01981B4F300EF9751 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923CABE11981B4F300EF9751 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		923CABE31981B4F300EF9751 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923CABE41981B4F300EF9751 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		923CABF91981B4F300EF9751 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923CABFA1981B4F300EF9751 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		923CABFE1981B4F300EF9751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../EFMockLocationManager/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		923CABFF1981B4F300EF9751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../EFMockLocationManager/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		923CAC011981B4F300EF9751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Application/MockLocationDemo-Prefix.pch";
+				INFOPLIST_FILE = "Application/MockLocationDemo-Info.plist";
+				PRODUCT_NAME = MockLocationDemo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		923CAC021981B4F300EF9751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Application/MockLocationDemo-Prefix.pch";
+				INFOPLIST_FILE = "Application/MockLocationDemo-Info.plist";
+				PRODUCT_NAME = MockLocationDemo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		923CAC041981B4F300EF9751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mocklocationdemo.app/mocklocationdemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mocklocationdemo/mocklocationdemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/MockLocationDemo-Info.plist";
+				PRODUCT_NAME = MockLocationDemoTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		923CAC051981B4F300EF9751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mocklocationdemo.app/mocklocationdemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mocklocationdemo/mocklocationdemo-Prefix.pch";
+				INFOPLIST_FILE = "Tests/MockLocationDemo-Info.plist";
+				PRODUCT_NAME = MockLocationDemoTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		923CABC61981B4F300EF9751 /* Build configuration list for PBXProject "MockLocationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				923CABFE1981B4F300EF9751 /* Debug */,
+				923CABFF1981B4F300EF9751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		923CAC001981B4F300EF9751 /* Build configuration list for PBXNativeTarget "MockLocationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				923CAC011981B4F300EF9751 /* Debug */,
+				923CAC021981B4F300EF9751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		923CAC031981B4F300EF9751 /* Build configuration list for PBXNativeTarget "MockLocationDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				923CAC041981B4F300EF9751 /* Debug */,
+				923CAC051981B4F300EF9751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 923CABC31981B4F300EF9751 /* Project object */;
+}
