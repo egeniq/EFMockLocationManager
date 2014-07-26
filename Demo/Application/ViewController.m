@@ -16,7 +16,6 @@
 @interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
-@property (nonatomic, strong) CLLocation *lastKnownLocation;
 @property (nonatomic, strong) EFLocationScenarioRunner *scenarioRunner;
 @end
 
@@ -95,26 +94,20 @@
 
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 // This just plots our mocked locations on the map.
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     // Only this delegate method is currently supported. More can be added in the future.
     NSLog(@"Got some locations %@", locations);
     
-    self.lastKnownLocation = [locations firstObject];
+    CLLocation *lastKnownLocation = [locations firstObject];
     
     // center the map around the point (500m area)
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.lastKnownLocation.coordinate, 500, 500);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(lastKnownLocation.coordinate, 500, 500);
     
     [self.mapView setRegion:viewRegion animated:YES];
     
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-    [annotation setCoordinate:self.lastKnownLocation.coordinate];
+    [annotation setCoordinate:lastKnownLocation.coordinate];
     [self.mapView addAnnotation:annotation];
 }
 
