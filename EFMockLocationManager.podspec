@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "5.1.1"
   s.source       = { :git => "https://github.com/Egeniq/EFMockLocationManager.git", :tag => s.version.to_s }
   s.public_header_files = 'EFMockLocationManager/*.h'
-  s.source_files = 'EFMockLocationManager/*.{h,m}'
+  s.private_header_files = 'EFMockLocationManager/Internal/*.h'
+  s.source_files = 'EFMockLocationManager/**/*.{h,m}'
   s.requires_arc = true
 end
