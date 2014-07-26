@@ -40,7 +40,7 @@ To simulate some actual movement, work with scenarios. Currently we only support
 
 Scenarios can easily be chained as they have optional onEnd blocks where you can launch the next scenario.
 
-Here's a code sample to illustrate a scenario. This is the one that's available in the demo application and runs out of the box:
+Here's a code sample to illustrate a scenario. This is the one that's available in the demo application and runs out of the box. (In the demo it features a bit more code to illustrate the locations on a map and to present an alert when the scenario completes)
 
 ```
 self.scenarioRunner = [[EFLocationScenarioRunner alloc] initWithMockLocationManager:mockLocationManager];
@@ -49,29 +49,22 @@ CLLocation *louvre = [[CLLocation alloc] initWithLatitude:48.862611 longitude:2.
 CLLocation *arcDeTriomph = [[CLLocation alloc] initWithLatitude:48.873781 longitude:2.295026];
 CLLocation *eiffelTower = [[CLLocation alloc] initWithLatitude:48.85837 longitude:2.294481];
 
-EFStraightLineScenario *supermanSavesLois = [[EFStraightLineScenario alloc] initWithFrom:louvre to:arcDeTriomph speed:EFLocationScenarioSpeedSupermanRun];
+EFStraightLineScenario *supermanSavesLois = 
+     [[EFStraightLineScenario alloc] initWithFrom:louvre 
+                                               to:arcDeTriomph                                                                                                      speed:EFLocationScenarioSpeedSupermanRun];
 
 [self.scenarioRunner
     runScenario:supermanSavesLois
-    onStart:^(CLLocation *startAt) {
-        // center the map around the point (500m area)
-        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(startAt.coordinate, 500, 500);
-        [self.mapView setRegion:viewRegion animated:NO];
-    }
     onEnd:^(CLLocation *endedAt) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"End"
-                                                        message:@"Oh no! Lois is not here, she's at the Eiffel Tower!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
         // It's important to use endedAt as the starting point for our next leg, since a scenario isn't guaranteed
         // to complete at its endpoint (some scenario's may simulate someone stranded halfway).
         // 
-        EFStraightLineScenario *toEiffel = [[EFStraightLineScenario alloc] initWithFrom:endedAt
-                                                                                     to:eiffelTower
-                                                                                  speed:EFLocationScenarioSpeedSupermanRun];
+        // Lois isn't at Arc De Triomph. Go to Eiffeltower from here.
+        EFStraightLineScenario *toEiffel = 
+            [[EFStraightLineScenario alloc] initWithFrom:endedAt
+                                                      to:eiffelTower
+                                                   speed:EFLocationScenarioSpeedSupermanRun];
         [self.scenarioRunner runScenario:toEiffel
                             onEnd:^(CLLocation *endedAt) {
             if ([endedAt isEqual:eiffelTower]) {
