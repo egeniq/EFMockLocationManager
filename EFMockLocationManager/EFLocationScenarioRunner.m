@@ -66,8 +66,4 @@
     }
 }
 
-- (void)dealloc {
-    NSLog(@"Byebye mock");
-}
-
 @end
