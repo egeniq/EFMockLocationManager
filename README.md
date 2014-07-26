@@ -5,7 +5,7 @@ A simple simulator that helps debugging location based apps. Designed to be more
 
 The project consists of 2 separate, but closely related parts:
 
-* A mock locationmanager object that mimics the CLLocationManager's interface, but doesn't do any real location tracking. 
+* A mock locationmanager object that mimics the CLLocationManager's interface, but doesn't use any of the device's sensors. It gets its location manually in your code.
 * A simulator that can simulate an object moving about according to various scenarios.
 
 The simulator accurately updates its location every half second. However whether or not you get location updates depends on how you use the location manager. It simulates accuracy by only reporting the simulator's location if the change is larger than the desired accuracy.
@@ -37,6 +37,8 @@ Alternative, simply cast it:
 Working with the simulator
 --------------------------
 To simulate some actual movement, work with scenarios. Currently we only support straight line scenarios with variable speed, but in the future we should be adding teleportation, random wandering, maybe even one that follows navigation instructions from mapkit.
+
+Scenarios can easily be chained as they have optional onEnd blocks where you can launch the next scenario.
 
 Here's a code sample to illustrate a scenario. This is the one that's available in the demo application and runs out of the box:
 
