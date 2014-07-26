@@ -51,7 +51,8 @@ CLLocation *eiffelTower = [[CLLocation alloc] initWithLatitude:48.85837 longitud
 
 EFStraightLineScenario *supermanSavesLois = 
      [[EFStraightLineScenario alloc] initWithFrom:louvre 
-                                               to:arcDeTriomph                                                                                                      speed:EFLocationScenarioSpeedSupermanRun];
+                                               to:arcDeTriomph
+                                            speed:EFLocationScenarioSpeedSupermanRun];
 
 [self.scenarioRunner
     runScenario:supermanSavesLois
