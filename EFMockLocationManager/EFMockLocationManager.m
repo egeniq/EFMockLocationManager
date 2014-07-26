@@ -153,10 +153,9 @@
 
 // Here's where the magic happens. It returns a casted CLLocationManager but
 // in reality we're just returning a mock location manager that accepts the same messages.
-+ (CLLocationManager *)mockLocationManager {
-    
-    EFMockLocationManager *instance = [[EFMockLocationManager alloc] init];
-    return (CLLocationManager *)instance;
+// (This is just for convenience, you could also cast to CLLocationManager easily yourself).
+- (CLLocationManager *)CLLocationManager {
+    return (CLLocationManager *)self;
 }
 
 @end

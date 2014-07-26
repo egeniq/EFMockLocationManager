@@ -15,7 +15,7 @@
 
 typedef void (^EFScenarioStatusBlock)(CLLocation *endedAt);
 
-- (id)initWithMockLocationManager:(id)locationManager;
+- (id)initWithMockLocationManager:(EFMockLocationManager *)locationManager;
 
 - (void)runScenario:(EFLocationScenario *)scenario;
 - (void)runScenario:(EFLocationScenario *)scenario onEnd:(EFScenarioStatusBlock)end;

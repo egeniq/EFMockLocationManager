@@ -41,15 +41,15 @@ NS_CLASS_AVAILABLE(10_6, 2_0)
 - (void)setLocation:(CLLocation *)location;
 
 /**
- * Get the mockLocationManager instance.
- * Gets casted to CLLocationManager so you get proper completion in your code (it
- * acts like a true CLLocationManager in terms of interface, but it's a different
- * thing under the hood.
+ * Get the CLLocationManager instance.
+ * This is basically the same object, but it gets casted to CLLocationManager 
+ * so you get proper completion in your code (it acts like a true CLLocationManager 
+ * in terms of interface, but it's a different thing under the hood.
  * 
  * Note, not every feature is currently implemented. At the moment it mostly supports
  * location updates with proper lat/long (no speed properties, beacons, heading etc.)
  */
-+ (CLLocationManager *)mockLocationManager;
+- (CLLocationManager *)CLLocationManager;
 
 /** 
  * below are all the CLLocationManager method clones. For documentation, see CLLocationManager.

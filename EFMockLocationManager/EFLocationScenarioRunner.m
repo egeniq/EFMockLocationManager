@@ -22,7 +22,7 @@
 
 @implementation EFLocationScenarioRunner
 
-- (id)initWithMockLocationManager:(id)locationManager {
+- (id)initWithMockLocationManager:(EFMockLocationManager *)locationManager {
     self = [super init];
     if (self) {
         self.mockLocationManager = (EFMockLocationManager *)locationManager;

@@ -27,9 +27,10 @@
     [super viewDidLoad];
 	 
     // Get the location manager
-    self.locationManager = [EFMockLocationManager mockLocationManager];
+    EFMockLocationManager *mockLocationManager = [[EFMockLocationManager alloc] init];
     
     // And use it like we would with a real locationmanager.
+    self.locationManager = mockLocationManager.CLLocationManager;
     self.locationManager.delegate = self;
     
     // Play with the below settings to see differences in accuracy.
@@ -47,7 +48,7 @@
     // [self.locationManager startMonitoringSignificantLocationChanges];
     
     // Now set up a nice simulation!
-    self.scenarioRunner = [[EFLocationScenarioRunner alloc] initWithMockLocationManager:self.locationManager];
+    self.scenarioRunner = [[EFLocationScenarioRunner alloc] initWithMockLocationManager:mockLocationManager];
     
     CLLocation *louvre = [[CLLocation alloc] initWithLatitude:48.862611 longitude:2.335238];
     CLLocation *arcDeTriomph = [[CLLocation alloc] initWithLatitude:48.873781 longitude:2.295026];
