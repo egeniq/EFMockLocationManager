@@ -8,16 +8,17 @@
 
 #import <Foundation/Foundation.h>
 @class EFLocationScenario;
-@class CLLocationManager;
+@class EFMockLocationManager;
 @class CLLocation;
 
 @interface EFLocationScenarioRunner : NSObject
 
 typedef void (^EFScenarioStatusBlock)(CLLocation *endedAt);
 
-@property (nonatomic, strong, readonly) CLLocationManager *locationManager;
+- (id)initWithMockLocationManager:(id)locationManager;
 
 - (void)runScenario:(EFLocationScenario *)scenario;
 - (void)runScenario:(EFLocationScenario *)scenario onEnd:(EFScenarioStatusBlock)end;
 - (void)runScenario:(EFLocationScenario *)scenario onStart:(EFScenarioStatusBlock) start onEnd:(EFScenarioStatusBlock)end;
+
 @end

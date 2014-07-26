@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 #import <EFLocationScenarioRunner.h>
 #import <EFStraightLineScenario.h>
+#import <EFMockLocationManager.h>
 
 @interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -24,9 +25,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	 
+    // Get the location manager
+    self.locationManager = [EFMockLocationManager mockLocationManager];
     
-    self.scenarioRunner = [[EFLocationScenarioRunner alloc] init];
+    // And use it like we would with a real locationmanager.
+    self.locationManager.delegate = self;
+    
+    // Play with the below settings to see differences in accuracy.
+    
+    // 1. Accurate - you can track superman's every move.
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    
+    // 2. Not so accurate. Notice how superman still saves lois, but his
+    // phone doesn't see his every location anymore.
+    // self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    // [self.locationManager startUpdatingLocation];
+    
+    // 3. To save superman's battery, we could only do significant changes.
+    // [self.locationManager startMonitoringSignificantLocationChanges];
+    
+    // Now set up a nice simulation!
+    self.scenarioRunner = [[EFLocationScenarioRunner alloc] initWithMockLocationManager:self.locationManager];
     
     CLLocation *louvre = [[CLLocation alloc] initWithLatitude:48.862611 longitude:2.335238];
     CLLocation *arcDeTriomph = [[CLLocation alloc] initWithLatitude:48.873781 longitude:2.295026];
@@ -67,26 +88,6 @@
                 }
             }];
         }];
-    
-    // Get the location manager
-    self.locationManager = self.scenarioRunner.locationManager;
-    
-    // And use it like we would with a real locationmanager.
-    self.locationManager.delegate = self;
-    
-    // Play with the below settings to see differences in accuracy.
-    
-    // Accurate - you can track superman's every move.
-    // self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    // [self.locationManager startUpdatingLocation];
-    
-    // Not so accurate. Notice how superman still saves lois, but his
-    // phone doesn't see his every location anymore.
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-    [self.locationManager startUpdatingLocation];
-
-    // Or to save superman's battery, we could only do significant changes.
-    // [self.locationManager startMonitoringSignificantLocationChanges];
 
 }
 

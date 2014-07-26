@@ -22,10 +22,10 @@
 
 @implementation EFLocationScenarioRunner
 
-- (id)init {
+- (id)initWithMockLocationManager:(id)locationManager {
     self = [super init];
     if (self) {
-        self.mockLocationManager = [[EFMockLocationManager alloc] init];
+        self.mockLocationManager = (EFMockLocationManager *)locationManager;
     }
     return self;
 }
@@ -64,12 +64,6 @@
         self.scenarioEndBlock = nil;
         block(location);
     }
-}
-
-// Here's where the magic happens. It returns a casted CLLocationManager but
-// in reality we're just returning a mock location manager that accepts the same messages.
-- (CLLocationManager *)locationManager {
-    return (CLLocationManager *)self.mockLocationManager;
 }
 
 - (void)dealloc {

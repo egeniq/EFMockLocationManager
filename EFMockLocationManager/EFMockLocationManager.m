@@ -23,6 +23,8 @@
 
 @implementation EFMockLocationManager
 
+#pragma mark - initialization
+
 - (id)init {
     self = [super init];
     if (self) {
@@ -34,6 +36,8 @@
     }
     return self;
 }
+
+#pragma mark - Clones of all public CLLocationManager's methods.
 
 - (void)startUpdatingLocation {
     self.isUpdatingLocation = YES;
@@ -126,6 +130,7 @@
     return NO;
 }
 
+#pragma mark - Mock methods
 
 // This is what the simulator calls to actually set the location. Here's where the
 // Mock decides to update the app.
@@ -144,6 +149,14 @@
             // skipping, we don't use this location because it would be too accurate for our settings.
         }
     }
+}
+
+// Here's where the magic happens. It returns a casted CLLocationManager but
+// in reality we're just returning a mock location manager that accepts the same messages.
++ (CLLocationManager *)mockLocationManager {
+    
+    EFMockLocationManager *instance = [[EFMockLocationManager alloc] init];
+    return (CLLocationManager *)instance;
 }
 
 @end
