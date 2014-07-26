@@ -81,7 +81,7 @@
         case EFLocationScenarioSpeedSupermanRun:
             return 300;
         case EFLocationScenarioSpeedSupermanFly:
-            return 1200; // ~ 4 * speed of sound
+            return 1200; // ~ speed of sound
     }
 }
 
