@@ -143,7 +143,7 @@
         if (self.location) {
             traveledDistance = [location distanceFromLocation:self.location];
         }
-        if (!self.location || (self.significantMode && traveledDistance > 800) || (!self.significantMode && traveledDistance > self.desiredAccuracy)) {
+        if (!self.location || (self.significantMode && traveledDistance > 500) || (!self.significantMode && traveledDistance > self.desiredAccuracy)) {
             _location = location;
             // todo, maybe also pass the skipped locations in the array?
             [self.delegate locationManager:(CLLocationManager *)self didUpdateLocations:@[location]];
